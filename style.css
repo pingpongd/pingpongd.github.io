@@ -1,5 +1,5 @@
-body {background-color: hwb(332 84% 1%);
-    font-family: "Special Gothic Expanded One", sans-serif;
+body {background-color: hwb(0 100% 0%);
+    font-family: "PT Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
     margin:0;
@@ -15,42 +15,61 @@ a {font-size:120%}
 img {width:300px}
 nav {    
     width:100vw;
-    height: 90;
+    height: 100;
     display: flex; /* 1 */
     flex-direction: column;
     justify-content: center; /* 2 */
     align-items: center;
-    padding: 1rem; /* 3 */
-    background: rgb(247, 51, 142); /* 4 */
+    padding: 0rem 1rem .1rem 1rem; /* Top Right Bottom Left */    /*color for top bar*/
+    background: rgb(159, 161, 255); /* 4 */
 }
 nav marquee {
-    margin: 0px 0px;
-    color:rgb(165, 0, 69); font-size:300%;
-    width:200;
-    padding: 0rem;
-    
-    
+    color:rgb(82, 44, 143); 
+    font-size:300%;
+    width:200;    
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 900;
 }
 nav ul {
     display: flex; /* 5 */
     list-style: none; /* 6 */
-    margin: 0px 0px;
-    padding: -9rem;
+    margin: 0rem;
+    padding: -15rem;
+    font-size: 70%;
+    font-family: 'PT Sans', sans-serif;
     
 }
+  
 nav ul li a {
+
     margin: 0px 0px;
+    text-decoration: none; /*removed underlines from under name*/
     color:rgb(255, 255, 255); font-size:100%;
+    padding: 8px 16px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
     
 }
+nav ul li a:hover{
+    background-color:rgb(188, 189, 252);
+}
+nav ul li a.active {
+    background-color: #f9fdff; /* Soft blue */
+    font-weight:bold;
+    border-color: #6f62bb;
+    color:rgb(159, 161, 255);
+    position: relative;
+    top: 1px;
+    z-index:1;
+  }
 nav li {
     padding-left: 1rem; /* 7! */
-    color:rgb(39, 0, 155); font-size:150%
+    color:rgb(213, 210, 224); font-size:150%
 }
 
 table, th, td {
     border: 1px solid;
 }
 ul {
-    color:rgb(0, 0, 0); font-size:100%;
+    color:rgb(0, 0, 0); font-size:120%;
 }
