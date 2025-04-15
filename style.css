@@ -1,14 +1,18 @@
-body {background-color: hsl(253, 81%, 79%);}
+body {background-color: hsl(253, 81%, 79%);
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 p {color:rgb(28, 12, 146); font-size:150%}
 li {color:rgb(134, 158, 244); font-size:150%}
 ul.partsOfADuck {
     font-size:120%;
     color:blue;
-    font-family:fantasy
 }
 a {font-size:120%}
 img {width:300px}
 nav {
+    
     display: flex; /* 1 */
     justify-content: space-between; /* 2 */
     padding: 0px 0px; /* 3 */

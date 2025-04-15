@@ -1,4 +1,4 @@
-This app allows the user to connect with mental health services, book virtual therapy sessions, monitor mood, and get AI-designed and AI-crafted individual mental wellness plans. 
+1This app allows the user to connect with mental health services, book virtual therapy sessions, monitor mood, and get AI-designed and AI-crafted individual mental wellness plans. 
 The app strives to give end-to-end mental wellness solutions by integrating proactive and reactive elements into the network so that the user can efficiently manage well-being.
 ##  Features
 
