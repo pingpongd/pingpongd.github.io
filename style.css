@@ -38,15 +38,15 @@ nav ul {
     font-size: 70%;
     font-family: 'PT Sans', sans-serif;
     
+    
 }
   
 nav ul li a {
-
     margin: 0px 0px;
     text-decoration: none; /*removed underlines from under name*/
     color:rgb(255, 255, 255); font-size:100%;
     padding: 8px 16px;
-    border-radius: 12px;
+    border-radius: 12px 12px 0 0;
     transition: background-color 0.3s ease;
     
 }
