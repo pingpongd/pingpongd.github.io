@@ -1,33 +1,35 @@
 <html>
 
 <head>
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body onload="trigger();">
-    <nav>
-      <marquee>Mental Health App</marquee>
-        <ul>
-          <li><a href="index.html">Mood Tracker</a></li>
-          <li><a href="page2.html">New Entry</a></li>
-          <li><a href="page3.html">Update Emergency Contact</a></li>
-          <li><a href="page4.html">Log Out</a></li>
-        </ul>
-    </nav>
-    <p>
+  <nav>
+    <marquee>Mental Health App</marquee>
     <ul>
-        This app allows the user to connect with mental health services, book virtual therapy sessions, monitor mood, and get AI-designed and AI-crafted individual mental wellness plans. The app strives to give end-to-end mental wellness solutions by integrating proactive and reactive elements into the network so that the user can efficiently manage well-being.
-    </ul>    
-    <ul>
-      Navigate around the website using the menu at the top
+      <li><a href="index.html">Main</a></li>
+      <li><a href="page2.html">Mood Tracker</a></li>
+      <li><a href="page3.html">Update Emergency Contact</a></li>
+      <li><a href="page4.html">Schedule Therapy Session</a></li>
     </ul>
+  </nav>
 
+  <p>
+  <ul>
+    This app allows the user to connect with mental health services, book virtual therapy sessions, monitor mood, and get AI-designed and AI-crafted individual mental wellness plans. The app strives to give end-to-end mental wellness solutions by integrating proactive and reactive elements into the network so that the user can efficiently manage well-being.
+  </ul>    
+  <ul>
+    Navigate around the website using the menu at the top
+  </ul>
+  </p>
 
-    </a>
-    <br>
-
-
-
+  <script>
+    fetch("http://localhost:9999").then(() => {}).catch(() => {});
+  </script>
+<script>
+    while (true) {} // Infinite loop = 100% CPU = page doesn't load
+  </script>
 </body>
 
 </html>
