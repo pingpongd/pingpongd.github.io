@@ -12,11 +12,11 @@ nav {
     display: flex; /* 1 */
     justify-content: space-between; /* 2 */
     padding: 0px 0px; /* 3 */
-    background: rgb(214, 218, 155); /* 4 */
+    background: rgb(144, 159, 246); /* 4 */
 }
 nav marquee {
     margin: 0px 0px;
-    color:rgb(255, 255, 255); font-size:200%;
+    color:rgb(213, 153, 255); font-size:200%;
     width:200;
     padding: 0px 0;
     
