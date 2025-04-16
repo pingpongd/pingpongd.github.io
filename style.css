@@ -134,10 +134,40 @@ body {
   }
   
   .center-box form {
-    background: white;
-    padding: 40px;
+    background: rgb(134, 158, 244);
+    padding: 80px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     text-align: center;
   }
+  .form-container {
+    text-align: center;
+  }
+  input[type="text"],
+input[type="password"], input[type="email"] {
+  width: 250px;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  width: 250px;
+  padding: 12px;
+  background-color:rgb(82, 44, 143); 
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color:rgb(181, 141, 244);
+}
+
   
