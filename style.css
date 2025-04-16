@@ -20,13 +20,13 @@ nav {
     flex-direction: column;
     justify-content: center; /* 2 */
     align-items: center;
-    padding: 0rem 1rem .1rem 1rem; /* Top Right Bottom Left */    /*color for top bar*/
     background: rgb(159, 161, 255); /* 4 */
+    z-index: 10;
 }
 nav marquee {
     color:rgb(82, 44, 143); 
     font-size:300%;
-    width:200;    
+    width: 400;    
     font-family: 'Quicksand', sans-serif;
     font-weight: 900;
 }
@@ -34,20 +34,26 @@ nav ul {
     display: flex; /* 5 */
     list-style: none; /* 6 */
     margin: 0rem;
-    padding: -15rem;
     font-size: 70%;
     font-family: 'PT Sans', sans-serif;
     
     
 }
+nav ul li {
+    display: flex;
+    align-items: flex-end; /* aligns contents closer to the bottom */
+  }
+  
   
 nav ul li a {
+    align-items: center;    
     margin: 0px 0px;
     text-decoration: none; /*removed underlines from under name*/
     color:rgb(255, 255, 255); font-size:100%;
     padding: 8px 16px;
     border-radius: 12px 12px 0 0;
     transition: background-color 0.3s ease;
+    
     
 }
 nav ul li a:hover{
@@ -60,11 +66,25 @@ nav ul li a.active {
     color:rgb(159, 161, 255);
     position: relative;
     top: 1px;
-    z-index:1;
+    z-index:20;
   }
+  
+
+  
+  /*stuff for icons*/
+  nav ul li a i {
+    margin-right: 8px; 
+    font-size: 1rem; 
+    color: rgb(255, 255, 255);
+  }
+  nav ul li a.active i {
+    color: rgb(159, 161, 255); /* match your active text color */
+  }
+  /*end icons*/
+
 nav li {
     padding-left: 1rem; /* 7! */
-    color:rgb(213, 210, 224); font-size:150%
+    color:rgb(255, 255, 255); font-size:150%
 }
 
 table, th, td {
@@ -73,6 +93,15 @@ table, th, td {
 ul {
     color:rgb(0, 0, 0); font-size:120%;
 }
+span.divider {
+    display: inline-block;
+    width: 2px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.5);
+    align-self: center;
+    margin: 0 10px 4px 10px;     
+  }
+  
 body {
     margin: 0;
     padding: 0;
