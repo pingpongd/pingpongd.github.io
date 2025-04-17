@@ -1,3 +1,4 @@
+/*the background obviously*/
 body {background-color: hwb(0 100% 0%);
     font-family: "PT Sans", sans-serif;
     font-weight: 400;
@@ -5,6 +6,7 @@ body {background-color: hwb(0 100% 0%);
     margin:0;
     padding:0;
 }
+/*no clue, zuzanna doesnt touch*/
 p {color:rgb(28, 12, 146); font-size:150%}
 li {color:rgb(134, 158, 244); font-size:150%}
 ul.partsOfADuck {
@@ -13,60 +15,100 @@ ul.partsOfADuck {
 }
 a {font-size:120%}
 img {width:300px}
+
+/* basic nav bar, imagine a box around the purple bar, this controls how those things are aligned*/
 nav {    
-    width:100vw;
-    height: 100;
+    width:100%;
+    height: 100px;
     display: flex; /* 1 */
-    flex-direction: column;
-    justify-content: center; /* 2 */
+    justify-content: flex-start;
     align-items: center;
-    background: rgb(159, 161, 255); /* 4 */
+    box-sizing: border-box;
+    position: relative;
     z-index: 10;
+    margin-right: 0rem;
 }
-nav marquee {
-    color:rgb(82, 44, 143); 
-    font-size:300%;
-    width: 400;    
-    font-family: 'Quicksand', sans-serif;
+
+/*"Paradiso" branding on the left hand*/
+.nav-brand {
     font-weight: 900;
+    color: rgb(82, 44, 143);
+    font-family: "Helvetica World", sans-serif;
+    white-space: nowrap;
+    font-size:60px;
+    margin-right: 2rem;
 }
+nav marquee {  /*makes is move*/
+  color:rgb(82, 44, 143); 
+  width: 400;    
+  font-family: "Helvetica World", sans-serif;
+  font-weight: 900;
+}
+
+
+/*the logout button, duh*/
+.logout-btn {
+    background-color: rgb(82, 44, 143);
+    width: 120px;
+    height: 48px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logout-btn:hover {
+    background-color: rgb(100, 67, 175);
+  }
+  
+/*also controls the nav bar? more visual stuff idk*/
 nav ul {
     display: flex; /* 5 */
     list-style: none; /* 6 */
-    margin: 0rem;
+    gap: 1.2rem;
+    align-items: center;
+    background: rgb(159, 161, 255); /* 4 */
+    padding: 0.3rem 1.5rem;
+    margin: 0;
     font-size: 70%;
     font-family: 'PT Sans', sans-serif;
-    
-    
+    border-radius: 2rem;
 }
 nav ul li {
     display: flex;
-    align-items: flex-end; /* aligns contents closer to the bottom */
+    align-items: center; /* aligns contents closer to the bottom */
   }
-  
-  
 nav ul li a {
     align-items: center;    
     margin: 0px 0px;
     text-decoration: none; /*removed underlines from under name*/
-    color:rgb(255, 255, 255); font-size:100%;
+    color:rgb(255, 255, 255); 
+    font-size:100%;
     padding: 8px 16px;
     border-radius: 12px 12px 0 0;
-    transition: background-color 0.3s ease;
-    
-    
+    transition: background-color 0.3s ease;  
 }
 nav ul li a:hover{
     background-color:rgb(188, 189, 252);
 }
 nav ul li a.active {
     background-color: #f9fdff; /* Soft blue */
-    font-weight:bold;
-    border-color: #6f62bb;
+    border-color: #3517e2;
     color:rgb(159, 161, 255);
+    border-radius: 12px 12px 0 0;
     position: relative;
-    top: 1px;
     z-index:20;
+    top: 12px;
+    padding-bottom: 32px;
+    
+
   }
   
 
@@ -80,8 +122,8 @@ nav ul li a.active {
   nav ul li a.active i {
     color: rgb(159, 161, 255); /* match your active text color */
   }
-  /*end icons*/
 
+  
 nav li {
     padding-left: 1rem; /* 7! */
     color:rgb(255, 255, 255); font-size:150%
@@ -102,13 +144,16 @@ span.divider {
     margin: 0 10px 4px 10px;     
   }
   
+  
+
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    font-family: Arial, sans-serif;
+    height: 90vh;
+    font-family: "PT Sans", sans-serif;
     display: flex;
     flex-direction: column;
+    color:#6f62bb;
   }
   
   .header {
