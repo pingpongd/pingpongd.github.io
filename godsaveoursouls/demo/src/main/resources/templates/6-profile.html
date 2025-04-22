@@ -2,6 +2,10 @@
 <!--PROFILE-->
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paradiso</title>
+  <script src="https://kit.fontawesome.com/aee30e104f.js" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/aee30e104f.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -10,8 +14,9 @@
 </head>
 
 <body onload="trigger();">
+  <div class="header">
+    <marquee class="nav-brand" behavior="scroll" direction="left">Paradiso</marquee>
     <nav>
-      <marquee class = "nav-brand">Paradiso</marquee>
         <ul>
           <li><a href="/index"><i class="fa-solid fa-bars"></i>Dashboard</a></li>
           <li><span class="divider"></span></li>
@@ -28,6 +33,66 @@
           <a href="/req/login" class="logout-btn">Logout</a>
         </ul>
     </nav>
-    <body>
-      <ul>profile stuff!</ul>
-    </body>
+  </div>
+
+  <div class="center-box">
+    <div class = "profile-container">
+      <div class="profile-sidebar">
+        <h3>Your Profile</h3>
+        <div class="field">Username:</div>
+        <div class="field">Password:</div>
+        <div class="field">First Name:</div>
+        <div class="field">Last Name:</div>
+        <div class="field">Email:</div>
+        <div class="field">DOB:</div>
+        <div class="field">Phone number:</div>
+        <div class="field">Emergency Contact:</div>
+        <div class="field opt-in">Opt into emergency contacting</div>
+      </div>
+    
+      <div class="profile-content">
+        <h3>Update your personal information below</h3>
+        <form id="profile-form">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" value="johndoe">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+          </div>
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" value="John">
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" value="Doe">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="john@example.com">
+          </div>
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" value="1990-01-01">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" value="(555) 123-4567">
+          </div>
+          <div class="form-group">
+            <label for="emergencyContact">Emergency Contact</label>
+            <input type="text" id="emergencyContact" name="emergencyContact" value="Jane Doe">
+          </div>
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="optIn" name="optIn">
+            <label for="optIn">Opt into emergency contacting</label>
+          </div>
+          <button type="submit" class="submit-btn">Save Changes</button>
+        </form>
+      </div>
+      
+    </div>
+</div>
+</body>
