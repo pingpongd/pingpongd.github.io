@@ -293,11 +293,9 @@ background-color:rgb(100, 67, 175);
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.survey-box {
-  margin-left: 101px; /* pushes it to the right */
-}
 
 .submit-btn:hover {
   background-color: rgb(100, 67, 175);
 }
+
 
