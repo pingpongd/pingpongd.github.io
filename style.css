@@ -214,5 +214,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color:rgb(181, 141, 244);
 }
-
+.survey-box {
+  margin-left: 101px; /* pushes it to the right */
+}
   
