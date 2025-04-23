@@ -213,7 +213,7 @@ background-color:rgb(100, 67, 175);
   flex: 0 0 auto;
   max-width: 100%;
   background: rgb(134, 158, 244);
-  width: 600px;
+  width: 750px;
   border: 3px solid rgb(159,161,255);
   border-radius: 1.5rem;
   box-sizing: border-box;
@@ -235,6 +235,7 @@ background-color:rgb(100, 67, 175);
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  box-shadow: none;
 }
 
 .profile-content .form-group {
@@ -244,7 +245,8 @@ background-color:rgb(100, 67, 175);
 }
 
 .profile-content .form-group label {
-  display: block;
+  display: flex;
+  justify-content: center;
   margin-bottom: 0.3rem;
   font-weight: 600;
   color: rgb(82,44,143);
@@ -262,7 +264,7 @@ background-color:rgb(100, 67, 175);
 .profile-content .form-group input[type="email"],
 .profile-content .form-group input[type="date"],
 .profile-content .form-group input[type="tel"] {
-  width: 18rem;
+  width: 15rem;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -270,13 +272,26 @@ background-color:rgb(100, 67, 175);
 }
 
 .profile-content .checkbox-group {
-  display: flex;
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin: 0.5rem 0 0;
+  display: inline-flex;
   align-items: center;
+  gap: 0.25rem;
+  margin: 0.5rem 0 0;
 }
 
 .profile-content .checkbox-group input {
   margin-right: 0.5rem;
   transform: scale(1.2);
+  grid-column: 1 / -1;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+}
+.profile-content .checkbox-group label {
+  margin: 0;          /* kill any default margins */
+  white-space: nowrap;/* keep it on one line */
 }
 
 .submit-btn {
