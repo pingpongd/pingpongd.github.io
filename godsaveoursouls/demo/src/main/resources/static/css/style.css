@@ -79,7 +79,7 @@ body {
   background-color: rgb(188, 189, 252);
 }
 .header nav ul li a.active {
-  background-color: #f9fdff;
+  background-color: #ffffff;
   color: rgb(159, 161, 255);
   position: relative;
   top: 12px;
