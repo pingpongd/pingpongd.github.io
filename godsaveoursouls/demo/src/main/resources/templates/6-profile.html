@@ -96,3 +96,19 @@
     </div>
 </div>
 </body>
+</html>
+<script>
+  async function trigger() {
+  const res = await fetch('/api/user/profile');
+  const user = await res.json();
+
+  document.getElementById('username').value = user.username;
+  document.getElementById('firstName').value = user.firstName;
+  document.getElementById('lastName').value = user.lastName;
+  document.getElementById('email').value = user.email;
+  document.getElementById('dob').value = user.dob;
+  document.getElementById('phone').value = user.phone;
+  document.getElementById('emergencyContact').value = user.emergencyContact;
+  document.getElementById('optIn').checked = user.optIn;
+  }
+</script>
