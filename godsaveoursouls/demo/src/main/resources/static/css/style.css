@@ -329,3 +329,106 @@ background-color:rgb(100, 67, 175);
 }
 
 
+/* 1) Two-column layout */
+.center-box-MT {
+  display: flex;
+  align-items: flex-start; /* align top of both columns */
+  gap: 2rem;
+}
+
+/* survey box takes up half the space */
+.survey-box {
+  flex: 1;
+}
+
+/* calendar column */
+.calendar-container {
+  flex: 1;
+}
+
+/* 2) Month header */
+#monthYear {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: rgb(82, 44, 143);
+}
+
+/* 3) Calendar grid */
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+/* optional: day‐of‐week labels */
+#calendar .dow {
+  font-weight: bold;
+  text-align: center;
+  padding: 4px 0;
+  color: rgb(100, 67, 175);
+}
+
+/* 4) Individual day cells */
+.day {
+  padding: 0.75rem 0;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  background-color: #fff;
+  transition: background-color 0.2s;
+}
+
+/* 5) Shade days with an entry */
+.day.has-entry {
+  background-color: rgba(159, 161, 255, 0.3);
+  border-color: rgb(159, 161, 255);
+}
+
+/* 6) Hover state */
+.day:hover {
+  background-color: rgba(159, 161, 255, 0.1);
+}
+
+/* 7) Responsive tweaks */
+@media (max-width: 800px) {
+  .center-box-MT {
+    flex-direction: column;
+  }
+  .survey-box,
+  .calendar-container {
+    width: 100%;
+  }
+}
+
+/* Calendar grid: make each row taller */
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  /* set each row of days to be 6rem tall (you can tweak) */
+  grid-auto-rows: 5rem;
+  gap: 6px;
+}
+
+/* Day cells: center text and ensure a minimum width/height */
+.day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* bump up font-size if you like */
+  font-size: 1rem;
+  /* optional extra padding */
+  padding: 0.5rem;
+  /* give it a light border so you can see the cell */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hover state to give feedback */
+.day:hover {
+  background-color: rgba(159, 161, 255, 0.1);
+}
+
