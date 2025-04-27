@@ -217,13 +217,11 @@ background-color:rgb(100, 67, 175);
   text-align: left;
 }
 
-/* if you want the opt‑in to look slightly different */
 .profile-sidebar .field.opt-in {
   background: rgba(82,44,143,0.2);
   font-weight: bold;
 }
 
-/* Right panel */
 .profile-content {
   flex: 0 0 auto;
   max-width: 100%;
@@ -239,7 +237,7 @@ background-color:rgb(100, 67, 175);
 .profile-content h3 {
   text-align: center;
   color: rgb(82,44,143);
-  margin: 0 0 1rem;  /* 1rem bottom only */
+  margin: 0 0 1rem;  
   padding: 0;
 }
 
@@ -305,8 +303,8 @@ background-color:rgb(100, 67, 175);
   align-items: center;
 }
 .profile-content .checkbox-group label {
-  margin: 0;          /* kill any default margins */
-  white-space: nowrap;/* keep it on one line */
+  margin: 0;         
+  white-space: nowrap;
 }
 
 .submit-btn {
@@ -329,24 +327,20 @@ background-color:rgb(100, 67, 175);
 }
 
 
-/* 1) Two-column layout */
 .center-box-MT {
   display: flex;
   align-items: flex-start; /* align top of both columns */
   gap: 2rem;
 }
 
-/* survey box takes up half the space */
 .survey-box {
   flex: 1;
 }
 
-/* calendar column */
 .calendar-container {
   flex: 1;
 }
 
-/* 2) Month header */
 #monthYear {
   text-align: center;
   margin-bottom: 0.5rem;
@@ -354,14 +348,12 @@ background-color:rgb(100, 67, 175);
   color: rgb(82, 44, 143);
 }
 
-/* 3) Calendar grid */
 #calendar {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 4px;
 }
 
-/* optional: day‐of‐week labels */
 #calendar .dow {
   font-weight: bold;
   text-align: center;
@@ -369,7 +361,6 @@ background-color:rgb(100, 67, 175);
   color: rgb(100, 67, 175);
 }
 
-/* 4) Individual day cells */
 .day {
   padding: 0.75rem 0;
   text-align: center;
@@ -387,12 +378,10 @@ background-color:rgb(100, 67, 175);
   border-color: rgb(159, 161, 255);
 }
 
-/* 6) Hover state */
 .day:hover {
   background-color: rgba(159, 161, 255, 0.1);
 }
 
-/* 7) Responsive tweaks */
 @media (max-width: 800px) {
   .center-box-MT {
     flex-direction: column;
@@ -403,25 +392,21 @@ background-color:rgb(100, 67, 175);
   }
 }
 
-/* Calendar grid: make each row taller */
+/* Calendar grid */
 #calendar {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  /* set each row of days to be 6rem tall (you can tweak) */
   grid-auto-rows: 5rem;
   gap: 6px;
 }
 
-/* Day cells: center text and ensure a minimum width/height */
+/* Day cells*/
 .day {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* bump up font-size if you like */
   font-size: 1rem;
-  /* optional extra padding */
   padding: 0.5rem;
-  /* give it a light border so you can see the cell */
   border: 1px solid #ddd;
   border-radius: 4px;
   cursor: pointer;
@@ -432,3 +417,117 @@ background-color:rgb(100, 67, 175);
   background-color: rgba(159, 161, 255, 0.1);
 }
 
+/* push below 70px header */
+.center-box {
+  padding-top: 80px;
+}
+
+/* two-column wrapper */
+.wellness-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+/* shared box styling */
+.chat-box,
+.plan-box {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* ————————————————————————————————————————— */
+/* Wellness Plan / AI-Chat panels match other tabs */
+/* ————————————————————————————————————————— */
+.chat-box,
+.plan-box {
+  background: rgba(159, 161, 255, 0.3);  /* same translucent purple as .center-box-MT form */
+  padding: 80px;                         /* match the 80px padding */
+  border-radius: 8px;                    /* same rounded corners */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);   /* same soft shadow */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Headings in those panels */
+.chat-box h2,
+.plan-box h2 {
+  color: rgb(82, 44, 143);        /* same deep purple for titles */
+  margin-bottom: 1rem;
+}
+
+/* Chat history & plan content get a neutral container */
+.chat-history,
+.plan-content {
+  flex: 1;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 0.5rem;
+  background: #fff;                /* white background inside the panel */
+}
+
+/* Chat-input area stays as is, or you can tweak to match other forms */
+.chat-input textarea,
+.chat-input button {
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+
+.chat-history {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 0.5rem;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.chat-input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chat-input textarea {
+  flex: 1;
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5rem;
+  height: 3rem;
+  font-family: inherit;
+}
+
+.chat-input button {
+  background: rgb(82,44,143);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+
+
+.plan-content {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .wellness-wrapper {
+    flex-direction: column;
+  }
+  .chat-box,
+  .plan-box {
+    max-width: 100%;
+    height: auto;
+  }
+}

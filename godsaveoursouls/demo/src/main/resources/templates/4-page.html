@@ -1,39 +1,55 @@
-<html>
-<!--yeah idk vro-->
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paradiso</title>
-  <script src="https://kit.fontawesome.com/aee30e104f.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Paradiso — Wellness Plan</title>
   <script src="https://kit.fontawesome.com/aee30e104f.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=PT+Sans:wght@700&family=Poppins:wght@600&display=swap" rel="stylesheet">
-  
 </head>
-
 <body onload="trigger();">
   <div class="header">
     <marquee class="nav-brand" behavior="scroll" direction="left">Paradiso</marquee>
     <nav>
-        <ul>
-          <li><a href="/index"><i class="fa-solid fa-bars"></i>Dashboard</a></li>
-          <li><span class="divider"></span></li>
-          <li><a href="/2-tracker"><i class="fa-solid fa-face-smile"></i>Mood Tracker</a></li>
-          <li><span class="divider"></span></li>
-          <li><a href="/3-scheduling"><i class="fa-solid fa-calendar"></i>Scheduling</a></li>
-          <li><span class="divider"></span></li>
-          <li><a href="/4-page"class = "active"><i class="fa-solid fa-calendar"></i>Wellness Plan</a></li>
-          <li><span class="divider"></span></li>
-          <li><a href="/5-page"><i class="fa-solid fa-calendar"></i>Resources</a></li>
-          <li><span class="divider"></span></li>
-          <li><a href="/6-profile"><i class="fa-solid fa-user"></i>Profile</a></li>
-          
-          <a href="/req/login" class="logout-btn">Logout</a>
-        </ul>
+      <ul>
+        <li><a href="/index"><i class="fa-solid fa-bars"></i>Dashboard</a></li>
+        <li><span class="divider"></span></li>
+        <li><a href="/2-tracker"><i class="fa-solid fa-face-smile"></i>Mood Tracker</a></li>
+        <li><span class="divider"></span></li>
+        <li><a href="/3-scheduling"><i class="fa-solid fa-calendar"></i>Scheduling</a></li>
+        <li><span class="divider"></span></li>
+        <li><a href="/4-page" class="active"><i class="fa-solid fa-calendar"></i>Wellness Plan</a></li>
+        <li><span class="divider"></span></li>
+        <li><a href="/5-page"><i class="fa-solid fa-calendar"></i>Resources</a></li>
+        <li><span class="divider"></span></li>
+        <li><a href="/6-profile"><i class="fa-solid fa-user"></i>Profile</a></li>
+      </ul>
     </nav>
+    <a href="/req/login" class="logout-btn">Logout</a>
+  </div>
 
-<div>
-  <ul>theres nothing here yet!</ul>
-</div>
+  <div class="center-box">
+    <div class="wellness-wrapper">
+      <!-- AI Chat Panel -->
+      <div class="chat-box">
+        <h2>AI Chat</h2>
+        <div class="chat-history">
+          <!-- incoming/outgoing messages will appear here -->
+        </div>
+        <div class="chat-input">
+          <textarea placeholder="Type your question…"></textarea>
+          <button id="sendBtn">Send</button>
+        </div>
+      </div>
+
+      <!-- Wellness Plan Display -->
+      <div class="plan-box">
+        <h2>Your Wellness Plan</h2>
+        <div class="plan-content">
+          <!-- AI-generated plan will be injected here -->
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
