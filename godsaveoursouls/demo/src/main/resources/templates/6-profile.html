@@ -24,9 +24,9 @@
           <li><span class="divider"></span></li>
           <li><a href="/3-scheduling"><i class="fa-solid fa-calendar"></i>Scheduling</a></li>
           <li><span class="divider"></span></li>
-          <li><a href="/4-page"><i class="fa-solid fa-calendar"></i>Undecided</a></li>
+          <li><a href="/4-page"><i class="fa-solid fa-calendar"></i>Wellness Plan</a></li>
           <li><span class="divider"></span></li>
-          <li><a href="/5-page"><i class="fa-solid fa-calendar"></i>Undecided</a></li>
+          <li><a href="/5-page"><i class="fa-solid fa-calendar"></i>Resources</a></li>
           <li><span class="divider"></span></li>
           <li><a href="/6-profile"class = "active"><i class="fa-solid fa-user"></i>Profile</a></li>
           
@@ -96,3 +96,19 @@
     </div>
 </div>
 </body>
+</html>
+<script>
+  async function trigger() {
+  const res = await fetch('/api/user/profile');
+  const user = await res.json();
+
+  document.getElementById('username').value = user.username;
+  document.getElementById('firstName').value = user.firstName;
+  document.getElementById('lastName').value = user.lastName;
+  document.getElementById('email').value = user.email;
+  document.getElementById('dob').value = user.dob;
+  document.getElementById('phone').value = user.phone;
+  document.getElementById('emergencyContact').value = user.emergencyContact;
+  document.getElementById('optIn').checked = user.optIn;
+  }
+</script>

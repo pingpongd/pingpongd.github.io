@@ -79,7 +79,7 @@ body {
   background-color: rgb(188, 189, 252);
 }
 .header nav ul li a.active {
-  background-color: #f9fdff;
+  background-color: #ffffff;
   color: rgb(159, 161, 255);
   position: relative;
   top: 12px;
@@ -134,6 +134,21 @@ body {
 
 .center-box form {
   background: rgb(134, 158, 244);
+  padding: 80px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.center-box-MT {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px; /* creates space below fixed navbar */
+}
+
+.center-box-MT form {
+  background: rgb(159,161,255,0.3);
   padding: 80px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -202,18 +217,16 @@ background-color:rgb(100, 67, 175);
   text-align: left;
 }
 
-/* if you want the opt‑in to look slightly different */
 .profile-sidebar .field.opt-in {
   background: rgba(82,44,143,0.2);
   font-weight: bold;
 }
 
-/* Right panel */
 .profile-content {
   flex: 0 0 auto;
   max-width: 100%;
   background: rgb(134, 158, 244);
-  width: 600px;
+  width: 750px;
   border: 3px solid rgb(159,161,255);
   border-radius: 1.5rem;
   box-sizing: border-box;
@@ -224,7 +237,7 @@ background-color:rgb(100, 67, 175);
 .profile-content h3 {
   text-align: center;
   color: rgb(82,44,143);
-  margin: 0 0 1rem;  /* 1rem bottom only */
+  margin: 0 0 1rem;  
   padding: 0;
 }
 
@@ -235,6 +248,7 @@ background-color:rgb(100, 67, 175);
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  box-shadow: none;
 }
 
 .profile-content .form-group {
@@ -244,7 +258,8 @@ background-color:rgb(100, 67, 175);
 }
 
 .profile-content .form-group label {
-  display: block;
+  display: flex;
+  justify-content: center;
   margin-bottom: 0.3rem;
   font-weight: 600;
   color: rgb(82,44,143);
@@ -262,7 +277,7 @@ background-color:rgb(100, 67, 175);
 .profile-content .form-group input[type="email"],
 .profile-content .form-group input[type="date"],
 .profile-content .form-group input[type="tel"] {
-  width: 18rem;
+  width: 15rem;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -270,13 +285,26 @@ background-color:rgb(100, 67, 175);
 }
 
 .profile-content .checkbox-group {
-  display: flex;
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin: 0.5rem 0 0;
+  display: inline-flex;
   align-items: center;
+  gap: 0.25rem;
+  margin: 0.5rem 0 0;
 }
 
 .profile-content .checkbox-group input {
   margin-right: 0.5rem;
   transform: scale(1.2);
+  grid-column: 1 / -1;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+}
+.profile-content .checkbox-group label {
+  margin: 0;         
+  white-space: nowrap;
 }
 
 .submit-btn {
@@ -299,3 +327,207 @@ background-color:rgb(100, 67, 175);
 }
 
 
+.center-box-MT {
+  display: flex;
+  align-items: flex-start; /* align top of both columns */
+  gap: 2rem;
+}
+
+.survey-box {
+  flex: 1;
+}
+
+.calendar-container {
+  flex: 1;
+}
+
+#monthYear {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: rgb(82, 44, 143);
+}
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+#calendar .dow {
+  font-weight: bold;
+  text-align: center;
+  padding: 4px 0;
+  color: rgb(100, 67, 175);
+}
+
+.day {
+  padding: 0.75rem 0;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  background-color: #fff;
+  transition: background-color 0.2s;
+}
+
+/* 5) Shade days with an entry */
+.day.has-entry {
+  background-color: rgba(159, 161, 255, 0.3);
+  border-color: rgb(159, 161, 255);
+}
+
+.day:hover {
+  background-color: rgba(159, 161, 255, 0.1);
+}
+
+@media (max-width: 800px) {
+  .center-box-MT {
+    flex-direction: column;
+  }
+  .survey-box,
+  .calendar-container {
+    width: 100%;
+  }
+}
+
+/* Calendar grid */
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: 5rem;
+  gap: 6px;
+}
+
+/* Day cells*/
+.day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hover state to give feedback */
+.day:hover {
+  background-color: rgba(159, 161, 255, 0.1);
+}
+
+/* push below 70px header */
+.center-box {
+  padding-top: 80px;
+}
+
+/* two-column wrapper */
+.wellness-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+/* shared box styling */
+.chat-box,
+.plan-box {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* ————————————————————————————————————————— */
+/* Wellness Plan / AI-Chat panels match other tabs */
+/* ————————————————————————————————————————— */
+.chat-box,
+.plan-box {
+  background: rgba(159, 161, 255, 0.3);  /* same translucent purple as .center-box-MT form */
+  padding: 80px;                         /* match the 80px padding */
+  border-radius: 8px;                    /* same rounded corners */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);   /* same soft shadow */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Headings in those panels */
+.chat-box h2,
+.plan-box h2 {
+  color: rgb(82, 44, 143);        /* same deep purple for titles */
+  margin-bottom: 1rem;
+}
+
+/* Chat history & plan content get a neutral container */
+.chat-history,
+.plan-content {
+  flex: 1;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 0.5rem;
+  background: #fff;                /* white background inside the panel */
+}
+
+/* Chat-input area stays as is, or you can tweak to match other forms */
+.chat-input textarea,
+.chat-input button {
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+
+.chat-history {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 0.5rem;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.chat-input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chat-input textarea {
+  flex: 1;
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5rem;
+  height: 3rem;
+  font-family: inherit;
+}
+
+.chat-input button {
+  background: rgb(82,44,143);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+
+
+.plan-content {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .wellness-wrapper {
+    flex-direction: column;
+  }
+  .chat-box,
+  .plan-box {
+    max-width: 100%;
+    height: auto;
+  }
+}
