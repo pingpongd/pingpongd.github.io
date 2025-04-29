@@ -24,10 +24,16 @@
     <h2>Sign Up</h2>
   <form action="/req/signup" method="post">
     <input type="text" name="username" id="username" placeholder="Username" required><br> 
-    <input type="email" name="email" id="email" placeholder="Email" required><br> 
+    <input type="email" name="email" id="email" placeholder="Email" title="Please enter a valid email address" required><br> 
     <input type="password" name="password" id="password" placeholder="Password" required><br> 
     <input type="password" name="passwordcon" id="passwordcon" placeholder="Confirm Password" required><br> 
-    <button type="button" id="submit">Create Account</button>
+    <button type="submit" id="submit" onclick="redirectToLogin()">Create Account</button>
+
+<script>
+function redirectToLogin() {
+  window.location.href = "/req/login";
+}
+</script>
   </form>
 </div>
 </div>
