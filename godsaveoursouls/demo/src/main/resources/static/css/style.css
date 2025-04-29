@@ -187,6 +187,8 @@ cursor: pointer;
 transition: background-color 0.3s ease;
 }
 
+
+
 button[type="button"] {
   width: 250px;
   padding: 12px;
@@ -549,5 +551,26 @@ background-color:rgb(100, 67, 175);
     max-width: 100%;
     height: auto;
   }
+}
+
+section {
+  width: 70%;          /* Control the width */
+  margin: 50px auto;   /* Center horizontally + add vertical space */
+  padding: 30px;       /* Space inside the box */
+  text-align: center;  /* Center the text inside */
+  font-size: 1.2em;    /* Make the text bigger */
+  background-color: #f0f8ff; /* (optional) light background color */
+  border-radius: 10px; /* (optional) rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* (optional) soft shadow */
+}
+
+.calendar-container {
+  width: 80%;
+  margin: 100px auto 40px auto;  /* Top Margin | Right | Bottom | Left */
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
