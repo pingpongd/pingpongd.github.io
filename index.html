@@ -4,22 +4,27 @@
   
 </head>
 
-<body onload="trigger();">
-  <label for="firstname">Enter your first name:</label><br>
-  <input type="text" id = "firstname" required><br>
-  <label for="firstname">Enter your last name:</label><br>
-  <input type="text" id = "lastname" required><br>
-  <button onclick="goToPage()">Submit</button>
+<body>
+  <form action="/action_page.php">
+
+  <label for="firstname">First name:</label><br>
+  <input type="text" id="firstname" name="firstname"><br>
+  <label for="lastname">Last name:</label><br>
+  <input type="text" id="lastname" name="lastname"><br><br>
+
+  <input type="submit" value="Submit">
+</form>
 <script>
 function goToPage() {
-var firstname = document.getElementById("firstname").value.toLowerCase();
-var lastname = document.getElementById("lastname").value.toLowerCase();
+console.log("Button clicked!");
+var firstname = document.getElementById("firstname").value.trim().value.toLowerCase();
+var lastname = document.getElementById("lastname").value.trim().value.toLowerCase();
 
-if (firstname == "sadie" && lastname == "wyman") {
+if (firstname === "sadie" && lastname === "wyman") {
   window.location.href = "sadiewyman.html";
 }
 else {
-  window.location.href = "index.html";
+  window.location.href = "test.html";
 }
 
 }
