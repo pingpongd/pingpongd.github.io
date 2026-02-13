@@ -6,11 +6,27 @@
 
 <body onload="trigger();">
   <label for="firstname">Enter your first name:</label><br>
-  <input type="text" id = "firstname"><br>
+  <input type="text" id = "firstname" required><br>
   <label for="firstname">Enter your last name:</label><br>
-  <input type="text" id = "lastname"><br>
-  <input type="submit" value="Submit">
+  <input type="text" id = "lastname" required><br>
+  <button onclick="goToPage()">Submit</button>
+<script>
+function goToPage() {
+var firstname = document.getElementById("firstname").value.toLowerCase();
+var lastname = document.getElementById("lastname").value.toLowerCase();
 
+if (firstname == "sadie" && lastname == "wyman") {
+  window.location.href = "sadiewyman.html";
+}
+else {
+  window.location.href = "index.html";
+}
+
+}
+
+
+
+</script>
 
 </body>
 
