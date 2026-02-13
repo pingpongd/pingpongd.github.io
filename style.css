@@ -14,7 +14,7 @@ body {
   font-family: "PT Sans", sans-serif;
   display: flex;
   flex-direction: column;
-  color: #6f62bb;
+  color: #f577f5;
 }
 
 /* 3) Fixed header/nav wrapper */
@@ -37,7 +37,7 @@ body {
   position:absolute;
   font-weight: 900;
   left: 2rem;
-  color: rgb(82, 44, 143);
+  color: rgb(241, 131, 255);
   font-family: "Helvetica World", sans-serif;
   white-space: nowrap;
   font-size: 60px;
@@ -45,7 +45,7 @@ body {
 
 /* 5) Marquee styling */
 .header marquee {
-  color: rgb(82, 44, 143);
+  color: rgb(241, 131, 255);
   font-family: "Helvetica World", sans-serif;
   font-weight: 900;
   width: 300px;
@@ -57,7 +57,7 @@ body {
   align-items: center;        
   list-style: none;
   gap: 1.2rem;
-  background: rgb(159, 161, 255);
+  background: rgb(255, 159, 204);
   padding: 0.5rem 1.5rem;
   margin: 0;
   font-size: 70%;
